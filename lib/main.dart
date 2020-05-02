@@ -110,7 +110,7 @@ class MyContactInfo extends StatelessWidget{
   Widget build(BuildContext context){
     return IntrinsicHeight(
       child: ListTile(
-        leading: contactType == "Phone"?Icon(Icons.phone, color:Theme.of(context).primaryColor): Icon(Icons.contact_mail, color:Theme.of(context).primaryColor),
+        leading: Icon(contactType == "Phone"?Icons.phone:Icons.contact_mail, color:Theme.of(context).primaryColor),
         title:Column(children: contactInfoList.map(
             (p)=>ContactInfo(p['ContactInfo'],p['Note'])
             ).toList(),),
